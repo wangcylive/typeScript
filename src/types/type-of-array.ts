@@ -20,4 +20,40 @@ export default function () {
 
     console.log(args, args1)
   }
+
+  type Name = string
+  type NameResolve = () => string
+  type NameOrResolve = Name | NameResolve
+
+  function getName(name: NameOrResolve): Name {
+    if (typeof name === 'string') {
+      return name
+    } else {
+      return name()
+    }
+  }
+
+  function a () {
+    return 2 + ''
+  }
+
+  getName(a)
+
+  type EventNames = 'click' | 'scroll' | 'mousemove'
+  function handleEvent(ele: Element, event: EventNames) {
+    const top = ele.getBoundingClientRect().top
+    console.log(top, event)
+  }
+
+  handleEvent(document.body, 'click')
+  handleEvent(document.querySelector('div:first-child'), 'scroll')
+
+
+  const tuple1: [string, number, object] = ['', 2, {}]
+  let tuple2: [number, number, string]
+  tuple2[0] = 3
+  tuple2[1] = NaN
+  tuple2[2] = ''
+  tuple2.push(3)
+  tuple2.push('')
 }
