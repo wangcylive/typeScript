@@ -1,3 +1,5 @@
+// ../declare/jQuery.d.ts
+
 export default function () {
   const s = $('#sss')
   

@@ -34,4 +34,6 @@ export default function () {
   let something
   something = true
   something = 40
+
+  let sys: symbol = Symbol()
 }
