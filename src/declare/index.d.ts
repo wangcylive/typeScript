@@ -6,3 +6,5 @@ declare class Animal {
   constructor(name: string)
   sayHi(): string
 }
+
+declare function create (args: object): void

@@ -8,11 +8,7 @@
     "declaration": true,
     "outDir": "lib",
     "lib": [
-      "dom",
-      "es5",
-      "scripthost",
-      "es2015.symbol",
-      "es2015.collection"
+      "esnext",
     ]
   },
   "include": [
