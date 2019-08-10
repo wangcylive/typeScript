@@ -3,16 +3,14 @@ module.exports = {
     [
       '@babel/preset-env',
       {
-        'targets': [],
-        'modules': false,
         'useBuiltIns': 'entry',
-        'debug': false
+        'corejs': '3.1.3'
       }
     ],
+    '@babel/preset-typescript',
     '@babel/preset-react'
   ],
   'plugins': [
-    'react-hot-loader/babel',
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-transform-arrow-functions',
     '@babel/plugin-transform-block-scoped-functions',

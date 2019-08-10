@@ -86,4 +86,8 @@ export default function () {
   }
 
   const fn1v = fn1(5)
+
+  let readArr1: ReadonlyArray<number> = [1, 2, 3]
+  let readMap1: ReadonlyMap<string, number> = new Map([['', 2]])
+  let readSet2: Readonly<any> = new Set([1, 2, 'null'])
 }
