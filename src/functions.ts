@@ -53,8 +53,32 @@ class Handler {
 
 const h = new Handler()
 
-function message ({ message: string, title: string }): string
+function message ({ message, title }: { message: string, title: string }): string
 function message (message: string): string
-function message (): string {
-
+function message (x): string {
+  if (typeof x === 'string') {
+    return x
+  }
+  if (typeof x === 'object') {
+    return x.message + x.title
+  }
+  return ''
 }
+
+const m1 = message('3')
+
+function f (sn: string | number) {
+  function postfix (a: string) {
+    return (<string>sn).charAt(0) + a
+  }
+  sn = sn || '5'
+  return postfix('sn')
+}
+
+type Easing = 'ease-in' | 'ease-out' | 'ease-in-out'
+
+function animation (easing: Easing): void {
+  console.log(3)
+}
+
+animation('ease-in')
